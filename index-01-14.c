@@ -365,17 +365,100 @@
 
 
 //指向函数指针数组的指针
+//int main()
+//{
+//    int arr[10] = { 0 };
+//    int(*p)[10] = &arr;//取出数组的地址
+//
+//    int(*pf)(int, int);//函数指针
+//    int(*pfArr[4])(int, int);//pfArr是一个数组 - 函数指针的数组
+//    //pparr是一个指向[函数指针数组]的指针 
+//    int(*(*pparr[4])(int, int)) = &pfArr;
+//    //pparr 是一个数组指针，指针指向的数组有4个元素
+//    //指向的数组的每个元素的类型是一个函数指针 int(*)(int,int)
+//
+//    return 0;
+//}
+
+//牛客网 BC6题 小飞机
+//int main()
+//{
+//    int i = 0;
+//    int k = 0;
+//    int y = 0;
+//    //飞机头部
+//    for (i = 0; i < 2; i++)
+//    {
+//       
+//        for (y = 0; y <=4; y++)
+//        {
+//            printf(" ");
+//        }
+//        printf("**\n");
+//    }
+//    //飞机身体
+//    for (i = 0; i < 2; i++)
+//    {
+//        for (y = 0; y < 12; y++)
+//        {
+//            printf("*");
+//        }
+//        printf("\n");
+//    }
+//    //飞机尾部
+//    for (i = 0; i < 2; i++)
+//    {
+//        for (y = 0; y < 4; y++)
+//        {
+//            printf(" ");
+//        }
+//            printf("*");
+//        for (k = 0; k < 2; k++)
+//        {
+//            printf(" ");
+//        }
+//        printf("*\n");
+//    }
+//    return 0;
+//}
+
+//BC8 十六进制转十进制 描述 十六进制整数ABCDEF对应的十进制整数，所占域宽为15。
+//int main()
+//{
+//    printf("%15d", 0xABCDEF);
+//    return 0;
+//}
+
+
+//BC9 printf的返回值 输出“Hello world!”的程序，BoBo老师告诉他printf函数有返回值，你能帮他写个程序输出printf(“Hello world!”)的返回值吗？
+//第一行为“Hello world!”第二行为printf(“Hello world!”)调用后的返回值。
+//int main()
+//{
+//    /*int ret = printf("Hello World!");
+//    printf("\n");
+//    printf("%d\n", ret);*/
+//    //简化
+//    printf("\n%d", printf("Hello world!"));
+//    return 0;
+//}
+
+
+//在屏幕上输出该学生的学号，3科成绩（注：输出成绩时需进行四舍五入且保留2位小数)
 int main()
 {
-    int arr[10] = { 0 };
-    int(*p)[10] = &arr;//取出数组的地址
-
-    int(*pf)(int, int);//函数指针
-    int(*pfArr[4])(int, int);//pfArr是一个数组 - 函数指针的数组
-    //pparr是一个指向[函数指针数组]的指针 
-    int(*(*pparr[4])(int, int)) = &pfArr;
-    //pparr 是一个数组指针，指针指向的数组有4个元素
-    //指向的数组的每个元素的类型是一个函数指针 int(*)(int,int)
-
+    int a = 0;
+    float b = 0.0;
+    float c = 0.0;
+    float d = 0.0;
+    scanf("%d%f%f%f", &a, &b, &c, &d);
+    if (a >= 1 && a <= 20000000)
+    {
+        printf("The each subject score of No. %d is %.2f, %.2f, %.2f.", a, b, c, d);
+    }
+    else
+        printf("学号输入错误请重新输入");
     return 0;
 }
+
+
+    
